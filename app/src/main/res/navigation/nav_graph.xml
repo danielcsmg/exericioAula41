@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/primeiroFragment">
+
+    <fragment
+        android:id="@+id/primeiroFragment"
+        android:name="br.com.zup.aplicacao.fragments.PrimeiroFragment"
+        android:label="fragment_primeiro"
+        tools:layout="@layout/fragment_primeiro" >
+        <action
+            android:id="@+id/action_primeiroFragment_to_segundoFragment"
+            app:destination="@id/segundoFragment" />
+        <action
+            android:id="@+id/action_primeiroFragment_to_terceiroFragment"
+            app:destination="@id/terceiroFragment" />
+        <argument
+            android:name="texto"
+            app:argType="string" />
+        <argument
+            android:name="texto2"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragment"
+        android:name="br.com.zup.aplicacao.fragments.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" >
+        <action
+            android:id="@+id/action_segundoFragment_to_terceiroFragment"
+            app:destination="@id/terceiroFragment" />
+        <action
+            android:id="@+id/action_segundoFragment_to_primeiroFragment"
+            app:destination="@id/primeiroFragment" />
+        <argument
+            android:name="inteiro"
+            app:argType="integer" />
+        <argument
+            android:name="booleano"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/terceiroFragment"
+        android:name="br.com.zup.aplicacao.fragments.TerceiroFragment"
+        android:label="fragment_terceiro"
+        tools:layout="@layout/fragment_terceiro" >
+        <action
+            android:id="@+id/action_terceiroFragment_to_primeiroFragment"
+            app:destination="@id/primeiroFragment" />
+        <action
+            android:id="@+id/action_terceiroFragment_to_segundoFragment"
+            app:destination="@id/segundoFragment" />
+        <argument
+            android:name="double"
+            app:argType="br.com.zup.aplicacao.fragments.model.NumeroDouble" />
+    </fragment>
+</navigation>

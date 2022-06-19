@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Aplicacao</string>
+    <string name="primeiro_fragment">Primeiro Fragment</string>
+    <string name="primeiro_argumento">Primeiro argumento</string>
+    <string name="segundo_argumento">Segundo argumento</string>
+    <string name="terceiro_fragment">Terceiro Fragment</string>
+    <string name="segundo_fragment">Segundo Fragment</string>
+    <string name="argumentos">Argumentos</string>
+    <string name="terceito_fragment">Terceiro fragment</string>
+</resources>
